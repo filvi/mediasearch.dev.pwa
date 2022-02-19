@@ -4,7 +4,7 @@ import {useEffect, useRef , useState} from "react"
 import { gsap } from "gsap"
 const Main = () => {
     
-    const [page, setPage] = useState("homepage")
+    // const [page, setPage] = useState("homepage")
     
     const tl = useRef();
 
@@ -46,7 +46,7 @@ const Main = () => {
             className="src "/>
             <div class="d-flex center-center" id="call-to-action-btn">
 
-            <svg onClick={submit_search} width="auto" height="59" viewBox="0 0 63 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg onClick={submit_search} className="cursor-pointer" width="auto" height="59" viewBox="0 0 63 59" fill="none" xmlns="http://www.w3.org/2000/svg">
             
                 <rect x="2" y="2" width="58" height="55" fill="black"/>
                 <g filter="url(#filter0_b_136_130)">

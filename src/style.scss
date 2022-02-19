@@ -932,3 +932,11 @@ button.src {
     background-position: top center;
     background-repeat: no-repeat;
 }
+
+
+
+.cursor-pointer {
+    &:hover {
+        cursor: pointer;
+    }
+}
