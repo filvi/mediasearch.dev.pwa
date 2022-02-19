@@ -43,7 +43,7 @@
     {
         "name": "Vectors",
         "description": "Search vectors",
-        "url": "/img",
+        "url": "/vec",
         "icons": [
             {
                 "src": "/img/query/vector.svg",
@@ -55,7 +55,7 @@
     {
         "name": "Videos",
         "description": "Search videos",
-        "url": "/img",
+        "url": "/vid",
         "icons": [
             {
                 "src": "/img/query/vdeo.svg",
@@ -67,7 +67,7 @@
     {
         "name": "Icons",
         "description": "Search icons",
-        "url": "/img",
+        "url": "/ico",
         "icons": [
             {
                 "src": "/img/query/icon.svg",
