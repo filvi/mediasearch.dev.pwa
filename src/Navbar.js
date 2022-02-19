@@ -4,7 +4,7 @@ const Navbar = () => {
     useEffect(() => {
 
     // Initialize deferredPrompt for use later to show browser install prompt.
-    let deferredPrompt;
+    var deferredPrompt;
     function showInstallPromotion(){
         console.log("Ciaoooooo")
     }
@@ -21,7 +21,7 @@ const Navbar = () => {
 
 
         let buttonInstall = document.getElementById("buttonInstall");
-        buttonInstall.addEventListener('click', async (e, deferredPrompt) => {
+        buttonInstall.addEventListener('click', async (e) => {
 
             e.preventDefault();
             // Show the install prompt
