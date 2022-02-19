@@ -1,5 +1,5 @@
 import React from 'react'
-import {useEffect, useRef , useState} from "react"
+import {useEffect, useRef } from "react"
 
 import { gsap } from "gsap"
 const Main = () => {
