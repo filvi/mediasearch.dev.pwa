@@ -27,8 +27,59 @@
       "purpose": "maskable"
     }
   ],
+  "shortcuts": [
+    {
+        "name": "Images",
+        "description": "Search images",
+        "url": "/img",
+        "icons": [
+            {
+                "src": "/img/query/image.svg",
+                "type": "image/svg+xml",
+                "purpose": "any"
+            }
+        ]
+    },
+    {
+        "name": "Vectors",
+        "description": "Search vectors",
+        "url": "/img",
+        "icons": [
+            {
+                "src": "/img/query/vector.svg",
+                "type": "image/svg+xml",
+                "purpose": "any"
+            }
+        ]
+    },
+    {
+        "name": "Videos",
+        "description": "Search videos",
+        "url": "/img",
+        "icons": [
+            {
+                "src": "/img/query/vdeo.svg",
+                "type": "image/svg+xml",
+                "purpose": "any"
+            }
+        ]
+    },
+    {
+        "name": "Icons",
+        "description": "Search icons",
+        "url": "/img",
+        "icons": [
+            {
+                "src": "/img/query/icon.svg",
+                "type": "image/svg+xml",
+                "purpose": "any"
+            }
+        ]
+    },
+
+  ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#414141",
+  "theme_color": "#EFC327",
   "background_color": "#414141"
 }
