@@ -12,12 +12,12 @@ const Main = () => {
     useEffect(() => {            
         
         tl.current = gsap.timeline({ ease: "Power4.easeOut"})
-        .to(".title", {duration:2, transform: "translateY(0)", "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", stagger: 0.4} )
-        .from(".logo-item", {duration: 1, opacity:0., y:100, stagger: 0.2} ,  "-=1")
-        .from(".nav-link", { duration: 1,  y:100, opacity:0, stagger: .1}, "-=1.5")
+        .to(".title", {duration:2, transform: "translateY(0)", "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", stagger: 1}, "-=2")
+        .from(".logo-item", {duration: 1, opacity:0., y:100, stagger: 0.2} ,  "-=0.5")
+        .from(".nav-link", { duration: 1,  y:100, opacity:0, stagger: .1}, "-=0.5")
         .to(".subtitle-description", { duration: 3, "clip-path": "polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%)", stagger: 0.20}, "-=1.7")
-        .from("#call-to-action-btn", { duration: 1,transform:"translateY(100px)", opacity:0,  }, "-=2.7")
-        .from("#call-to-action-input", { duration: 1,  transform:"translateY(100px)", opacity:0, }, "-=2.7")
+        .from("#call-to-action-btn", { duration: 1,scale:0, opacity:0,  }, "-=2.7")
+        .from("#call-to-action-input", { duration: 1,  scale:0, opacity:0, }, "-=2.7")
 
         }, []);
 
@@ -44,9 +44,9 @@ const Main = () => {
         <div className="d-flex text-white" >
             <input style={{maxHeight: "59px"}} type="text" id="call-to-action-input" name="q" placeholder="eg. technology"
             className="src "/>
-            <div class="d-flex center-center" id="call-to-action-btn">
+            <div className="d-flex center-center" id="call-to-action-btn">
 
-            <svg onClick={submit_search} className="cursor-pointer" width="auto" height="59" viewBox="0 0 63 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg onClick={submit_search} className="cursor-pointer" width="62" height="59" viewBox="0 0 63 59" fill="none" xmlns="http://www.w3.org/2000/svg">
             
                 <rect x="2" y="2" width="58" height="55" fill="black"/>
                 <g filter="url(#filter0_b_136_130)">
@@ -54,8 +54,8 @@ const Main = () => {
                     <path d="M0 0V59H62.6227V0H31.3114H0ZM50.7511 45.0386L48.733 47.0248C48.08 47.6965 46.9819 47.6965 46.2993 47.0248L39.1169 40.0149C38.7905 39.6936 38.5827 39.2554 38.5827 38.8173V37.6782C35.9116 39.6351 32.914 40.7743 29.4713 40.7743C21.2502 40.7743 14.6021 34.2025 14.6021 26.1119C14.6021 18.0213 21.2799 11.4495 29.5009 11.4495C37.722 11.4495 44.3998 17.9629 44.3998 26.0535C44.3998 29.4708 43.2423 32.6837 41.2538 35.0203H42.4113C42.8565 35.0203 43.3017 35.2248 43.6282 35.546L50.7511 42.5851C51.4337 43.2861 51.4337 44.396 50.7511 45.0386Z" fill="#F6C828"/>
                 </g>
                 <defs>
-                    <filter id="filter0_b_136_130" x="-3" y="-3" width="68.6226" height="65" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <filter id="filter0_b_136_130" x="-3" y="-3" width="68.6226" height="65" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                     <feGaussianBlur in="BackgroundImage" stdDeviation="1.5"/>
                     <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_136_130"/>
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_136_130" result="shape"/>

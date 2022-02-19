@@ -7,7 +7,10 @@ import reportWebVitals from './reportWebVitals';
 import Main from './Main.js'
 import Navbar from './Navbar.js'
 
+
+
 ReactDOM.render(
+
   <React.StrictMode>
     <main>
     <div className="container">

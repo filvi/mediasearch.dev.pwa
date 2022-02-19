@@ -1,6 +1,41 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+
 const Navbar = () => {
+    useEffect(() => {
+
+    // Initialize deferredPrompt for use later to show browser install prompt.
+    let deferredPrompt;
+    function showInstallPromotion(){
+        console.log("Ciaoooooo")
+    }
+    window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent the mini-infobar from appearing on mobile
+        e.preventDefault();
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+        // Update UI notify the user they can install the PWA
+        showInstallPromotion();
+        // Optionally, send analytics event that PWA install promo was shown.
+        console.log(`'beforeinstallprompt' event was fired.`);
+        });
+
+
+        let buttonInstall = document.getElementById("buttonInstall");
+        buttonInstall.addEventListener('click', async (e, deferredPrompt) => {
+
+            e.preventDefault();
+            // Show the install prompt
+            deferredPrompt.prompt();
+            // Wait for the user to respond to the prompt
+            const { outcome } = await deferredPrompt.userChoice;
+            // Optionally, send analytics event with outcome of user choice
+            console.log(`User response to the install prompt: ${outcome}`);
+            // We've used the prompt, and can't use it again, throw it away
+            deferredPrompt = null;
+          });
+    })
     return (
+         
         <>
         <nav>
                 <div className="nav-items">
@@ -27,6 +62,13 @@ const Navbar = () => {
                             d="M98.3673 8.05444L132 27.483L98.3673 46.9116L98.3673 8.05444Z" fill="white" />
                     </a>
                 </svg>
+                 <ul>
+                        <li className="nav-link" >
+                            <a href="/" id="buttonInstall">
+                                <img src="./img/navbar/download.svg" alt="home"/>
+                            </a>
+                        </li>
+                    </ul>
                     {/* <ul>
                         <li className="nav-link">
                             <a href="/">
